@@ -1,0 +1,52 @@
+{
+  "ECommerce": {
+    "date_creation": "N/A",
+    "version": "1.0",
+    "date_update": "N/A",
+    "VPC": {
+      "date_creation": "N/A",
+      "name": "xxxx",
+      "status": "xxx"
+    },
+    "PublicSubnet1": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "PublicSubnet2": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "PrivateSubnet1": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "PrivateSubnet2": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "AngularSecurityGroup": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "SpringSecurityGroup": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "AngularRouteTable": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "SpringRouteTable": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "NATGateway": {
+      "name": "xxx",
+      "status": "xxx"
+    },
+    "INTGateway": {
+      "name": "xxx",
+      "status": "xxx"
+    }
+  }
+}
