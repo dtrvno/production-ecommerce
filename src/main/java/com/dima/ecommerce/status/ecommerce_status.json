@@ -1,0 +1,13 @@
+{
+  "ECommerceDeployment": {
+    "version": 1.0,
+    "steps": [
+      {
+        "init":0,
+        "vpc":0,
+        "subnets": 0
+      }
+    ]
+
+  }
+}
