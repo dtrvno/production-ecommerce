@@ -9,12 +9,7 @@
         "name": "",
         "status": "false"
         },
-        "subnets": [ {
-          "id": "",
-          "name": "",
-          "status": ""
-        }
-        ]
+        "subnets": 0
       }
     ]
 
