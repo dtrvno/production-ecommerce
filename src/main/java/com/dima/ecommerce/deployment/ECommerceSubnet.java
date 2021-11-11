@@ -12,4 +12,7 @@ public class ECommerceSubnet extends ETask {
     public String getTaskName() {
         return taskName;
     }
+    public void updateStatus() {
+
+    }
 }

@@ -20,20 +20,22 @@ public class ECommerceConfiguration {
     public static Ec2Client ec2 = Ec2Client.builder().region(region).build();
     public static JSONObject configuration=null;
     public static JSONArray steps=null;
-    public static void loadConfiguration(String path) throws  ECommerceException {
+    public static  String path="/Users/dima/angular/ecommerce/ECommerceProduction/ecommerce_status.json";
+    public static void loadConfiguration() throws  ECommerceException {
         try {
            String content = Files.readString(Paths.get(path), StandardCharsets.US_ASCII);
            JSONObject obj = EJsonUtils.parse(content);
-           configuration=(JSONObject) obj.get("ECommerceDeployment");
-           if (configuration==null) {
+           JSONObject jsonConfig=(JSONObject) obj.get("ECommerceDeployment");
+           if (jsonConfig==null) {
                throw new ECommerceException(String.format("There is no attribute 'ECommerceDeployment' in json file %s",
                        path));
            }
-           JSONArray stepArray = (JSONArray) configuration.get("steps");
+           JSONArray stepArray = (JSONArray) jsonConfig.get("steps");
            if(stepArray==null)
                throw new ECommerceException(String.format("There is no attribute 'steps' in json file %s",
                        path));
            steps=stepArray;
+           configuration=obj;
         }
         catch (IOException e) {
             throw new ECommerceException(e.getMessage());

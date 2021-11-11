@@ -21,7 +21,9 @@ public class EFlow {
                 JSONObject obj=(JSONObject)object;
                 String taskName=(String) obj.keySet().toArray()[0];
                 ETask task=ECommerceFactory.getTaskInstance(taskName);
+                task.setJsonConfig(obj);   // set json config for certain task
                 task.create();
+                task.updateStatus();
                 ECommerceLogging.info(String.format("Executed task %s",taskName));
             }
 
