@@ -19,7 +19,7 @@ public class ECommerceFactory {
     }
     public static ETask getTaskInstance(String name)  throws ECommerceException {
         ETask task = map.get(name);
-        if (task==null) throw new ECommerceException(String.format("Task %s does not exist in configuration",name));
+        if (task==null) throw new ECommerceException(String.format("Task %s does not supported by framework",name));
         return task;
     }
 }

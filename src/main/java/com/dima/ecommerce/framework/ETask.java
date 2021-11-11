@@ -12,7 +12,7 @@ public abstract class ETask {
     private Object jsonConfig=null;
     protected ECommerceCommand command= new ECommerceCommand();
     public abstract void create() throws ECommerceException ;
-
+    public abstract void updateStatus() ;
 
     public Object getJsonConfig() {
         return jsonConfig;
@@ -25,7 +25,6 @@ public abstract class ETask {
     public String getTaskName() {
         return taskName;
     }
-    public abstract void updateStatus() ;
     public void saveStatusFile() {
         EJsonUtils.jsonToFile(ECommerceConfiguration.configuration,ECommerceConfiguration.path);
     }

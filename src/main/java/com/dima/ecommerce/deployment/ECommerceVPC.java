@@ -35,9 +35,9 @@ public class ECommerceVPC extends ETask {
    }
    public String createVPC() throws ECommerceException {
         JSONObject jsonObject=(JSONObject) getJsonConfig();
-        String status =(String) jsonObject.get("status");
+        Boolean status =(Boolean) jsonObject.get("status");
         String vpcName= (String) jsonObject.get("name");
-        if(status.equals("true")) {
+        if(status.booleanValue()) {
             ECommerceLogging.info(String.format("VPC %s already created",vpcName));
             return null;
         }

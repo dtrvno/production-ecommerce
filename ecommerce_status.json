@@ -5,10 +5,9 @@
     "steps" : [ {
       "vpc" : {
         "name" : "ApplicationVPC",
-        "taskName" : "vpc",
         "cidr" : "10.0.0.0/16",
-        "id" : "vpc-078ced1555c1c5858",
-        "status" : true
+        "id" : "vpc-0b96016237ccbb44b",
+        "status" : false
       }
     }, {
       "subnets" : [ {
@@ -17,28 +16,28 @@
         "cidr" : "10.0.0.0/24",
         "id" : "",
         "type" : "private",
-        "status" : ""
+        "status" : false
       }, {
         "availability_zone" : 1,
         "name" : "PublicSubnet1",
         "cidr" : "10.0.1.0/24",
         "id" : "",
         "type" : "public",
-        "status" : ""
+        "status" : false
       }, {
         "availability_zone" : 1,
         "name" : "PrivateSubnet2",
         "cidr" : "10.0.2.0/24",
         "id" : "",
         "type" : "private",
-        "status" : ""
+        "status" : false
       }, {
         "availability_zone" : 1,
         "name" : "PublicSubnet2",
         "cidr" : "10.0.3.0/24",
         "id" : "",
         "type" : "public",
-        "status" : ""
+        "status" : false
       } ]
     } ]
   }
