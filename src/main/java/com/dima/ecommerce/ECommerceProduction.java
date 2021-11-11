@@ -1,10 +1,11 @@
 package com.dima.ecommerce;
 
+import com.dima.ecommerce.flow.EFlow;
+
 public class ECommerceProduction {
 
     public static void main(String[] args) {
- // Application deploys application into region.
-	// write your code here
-        System.out.println("test");
+        EFlow flow = new EFlow();
+        flow.execute();
     }
 }

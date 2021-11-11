@@ -1,0 +1,52 @@
+{
+  "ECommerceDeployment": {
+    "version": 1.0,
+    "hosted_zone": "dtrubov.net",
+    "steps": [
+      {
+        "init": 0,
+        "vpc": {
+        "id": "",
+        "name": "ApplicationVPC",
+        "cidr":"10.0.00/16",
+        "status": "false"
+        },
+        "subnets": [ {
+          "id": "",
+          "type": "private",
+          "availability_zone": 1,
+          "name": "PrivateSubnet1",
+          "status": "",
+          "cidr": "10.0.0.0/24"
+        },
+          {
+            "id": "",
+            "type": "public",
+            "availability_zone": 1,
+            "name": "PublicSubnet1",
+            "status": "",
+            "cidr": "10.0.1.0/24"
+          },
+          {
+            "id": "",
+            "type": "private",
+            "availability_zone": 1,
+            "name": "PrivateSubnet2",
+            "status": "",
+            "cidr": "10.0.2.0/24"
+          },
+          {
+            "id": "",
+            "type": "public",
+            "availability_zone": 1,
+            "name": "PublicSubnet2",
+            "status": "",
+            "cidr": "10.0.3.0/24"
+          }
+
+        ]
+      }
+    ]
+
+  }
+}

@@ -1,8 +1,10 @@
 package com.dima.ecommerce.framework;
 
+import com.dima.ecommerce.utils.ECommerceException;
+
 public class ETask {
     private String name;
-    protected void execute(String command) {
+    public void execute() throws ECommerceException {
 
     }
 }
