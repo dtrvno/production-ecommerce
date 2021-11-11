@@ -7,8 +7,13 @@ import com.dima.ecommerce.utils.ECommerceLogging;
 
 public class EInit extends ETask {
     static  String configurationFile="/Users/dima/angular/ecommerce/ECommerceProduction/ecommerce_status.json";
-    public void execute() throws ECommerceException {
+    private final String taskName="init";
+    public void create() throws ECommerceException {
         ECommerceConfiguration.loadConfiguration(configurationFile);
         ECommerceLogging.info("Deployment has been initialized");
+    }
+
+    public String getTaskName() {
+        return taskName;
     }
 }
