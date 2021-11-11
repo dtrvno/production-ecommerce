@@ -1,6 +1,5 @@
 package com.dima.ecommerce;
 
-import com.dima.ecommerce.deployment.ECommerceFactory;
 import com.dima.ecommerce.flow.EFlow;
 
 public class ECommerceProduction {

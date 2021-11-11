@@ -1,5 +1,8 @@
-package com.dima.ecommerce.deployment;
+package com.dima.ecommerce.flow;
 
+import com.dima.ecommerce.deployment.ECommerceSubnet;
+import com.dima.ecommerce.deployment.ECommerceVPC;
+import com.dima.ecommerce.flow.EInit;
 import com.dima.ecommerce.framework.ETask;
 import com.dima.ecommerce.utils.ECommerceException;
 
@@ -9,9 +12,7 @@ public class ECommerceFactory {
     private static Hashtable<String, ETask>  map = new Hashtable<>();
 // we need to register this automatically based on package content...
     public static void registerInstances() {
-        ETask  task= new EInit();
-        map.put(task.getTaskName(),task);
-        task = new ECommerceSubnet();
+        ETask task = new ECommerceSubnet();
         map.put(task.getTaskName(),task);
         task=new ECommerceVPC();
         map.put(task.getTaskName(),task);

@@ -2,6 +2,7 @@ package com.dima.ecommerce.deployment;
 //parameters VPC,CIDR
 
 import com.dima.ecommerce.framework.ETask;
+import com.dima.ecommerce.utils.ECommerceException;
 
 public class ECommerceSubnet extends ETask {
     //aws ec2 create-subnet --vpc-id vpc-016f7f2119b9e2764 --cidr-block 10.0.1.0/24
@@ -13,6 +14,8 @@ public class ECommerceSubnet extends ETask {
         return taskName;
     }
     public void updateStatus() {
+    }
+    public void create() throws ECommerceException {
 
     }
 }

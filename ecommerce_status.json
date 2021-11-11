@@ -3,17 +3,12 @@
     "hosted_zone" : "dtrubov.net",
     "version" : 1.0,
     "steps" : [ {
-      "init" : {
-        "taskName" : "init",
-        "status" : true
-      }
-    }, {
       "vpc" : {
         "name" : "ApplicationVPC",
         "taskName" : "vpc",
         "cidr" : "10.0.0.0/16",
-        "id" : "",
-        "status" : "false"
+        "id" : "vpc-078ced1555c1c5858",
+        "status" : true
       }
     }, {
       "subnets" : [ {

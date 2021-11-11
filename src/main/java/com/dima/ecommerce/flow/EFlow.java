@@ -1,10 +1,6 @@
 package com.dima.ecommerce.flow;
 
 import com.dima.ecommerce.configuration.ECommerceConfiguration;
-import com.dima.ecommerce.deployment.ECommerceFactory;
-import com.dima.ecommerce.deployment.ECommerceSubnet;
-import com.dima.ecommerce.deployment.ECommerceVPC;
-import com.dima.ecommerce.deployment.EInit;
 import com.dima.ecommerce.framework.ETask;
 import com.dima.ecommerce.utils.ECommerceException;
 import com.dima.ecommerce.utils.ECommerceLogging;
@@ -13,6 +9,7 @@ import org.json.simple.JSONObject;
 
 public class EFlow {
     public EFlow() {
+        EInit.initialize();
         ECommerceFactory.registerInstances();
     }
     public void create() {
@@ -21,9 +18,13 @@ public class EFlow {
                 JSONObject obj=(JSONObject)object;
                 String taskName=(String) obj.keySet().toArray()[0];
                 ETask task=ECommerceFactory.getTaskInstance(taskName);
-                task.setJsonConfig(obj);   // set json config for certain task
+                if(obj.get(taskName) instanceof JSONObject)
+                   task.setJsonConfig((JSONObject) obj.get(taskName));   // set json config for certain task
+                else
+                    task.setJsonConfig((JSONArray) obj.get(taskName));   // set json array config for certain task
                 task.create();
                 task.updateStatus();
+                task.saveStatusFile();
                 ECommerceLogging.info(String.format("Executed task %s",taskName));
             }
 
